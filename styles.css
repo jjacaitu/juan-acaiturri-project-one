@@ -88,9 +88,10 @@ h4 {
 .button {
     background-color: #9200ff;
     padding: 5px 20px;
-    display: inline-block;
-    margin: 25px auto 0;
+    display: block;
+    margin: 25px 0 0;
     transition: all 0.5s;
+    width: 165px;
     
         
 }
@@ -387,9 +388,28 @@ nav a:hover::before, a:focus::before {
 
 @media (max-width:965px){
 
+    /* General */
+
     body {
         font-size: 1rem;
     }
+
+    /* Header  */
+
+    .header_main {
+        width: 60%;
+    }
+
+    .social,header nav {
+        display: none;
+    }
+
+    .fas.fa-bars {
+        display: block;
+        transition: all 0.3s;
+    }
+
+    /* sections */
 
     .line_up_image, .experiences_image, .line_up .information, .experiences .information, .tickets_image, .tickets .information {
         float: none;
@@ -424,22 +444,13 @@ nav a:hover::before, a:focus::before {
         padding: 10% 0;
     }
 
+    .button {
+        margin: 25px auto 0;
+    }
+
     .icons, .contact, .stay_updated {
         float: none;
         width: 100%;
-    }
-
-    .header_main {
-        width: 60%;
-    }
-
-    .social,header nav {
-        display: none;
-    }
-
-    .fas.fa-bars {
-        display: block;
-        transition: all 0.3s;
     }
 
     .icons {
@@ -460,6 +471,8 @@ nav a:hover::before, a:focus::before {
         position: inherit;
     }
 
+    /* footer */
+
     .contact, .stay_updated, input {
         text-align: center;
     }
@@ -476,6 +489,18 @@ nav a:hover::before, a:focus::before {
 
 @media(max-width:750px){
 
+    /* header */
+
+    .header_main {
+        width: 80%;
+    }
+
+    nav li {
+        margin: 5px;
+    }
+
+    /* The gram section */
+
     .gram img {
         width: calc(100% / 2 - 2%/2);
     }
@@ -487,6 +512,8 @@ nav a:hover::before, a:focus::before {
         display: none;
     }
 
+    /* footer */
+
     button[type=submit], input[type=email] {
         float: none;
         width: 100%;
@@ -497,17 +524,12 @@ nav a:hover::before, a:focus::before {
         margin-top: 10px;
     }
 
-    .header_main {
-        width: 80%;
-    }
-
-    nav li {
-        margin: 5px;
-    }
+    
  
 }
 
 @media (max-width:560px) {
+
     h2 {
         font-size: 1.5rem;
     }
