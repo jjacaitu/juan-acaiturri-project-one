@@ -6,16 +6,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
-
-/* base styling */
-
-html {
-    font-size: 125%;
-}
-
-body {
-    line-height: 29px;
-}
+/* Default stripping */
 
 ul,li {
     list-style: none;
@@ -28,8 +19,23 @@ button, input {
     font-size: 1.25rem;
 }
 
+h2,p, h1, h3 {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
+}
+
+/* base styling */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    line-height: 29px;
 }
 
 img {
@@ -40,11 +46,6 @@ img {
 body,a, button, input[type=submit] {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-}
-
-h2,p, h1, h3 {
-    margin: 0;
-    padding: 0;
 }
 
 nav,h1,button,h2, h3, input[type=submit] {
@@ -122,6 +123,7 @@ header {
 }
 
 /* Nav styling */
+
 nav ul {
     text-align: center;
     padding-top: 40px;
@@ -129,13 +131,10 @@ nav ul {
 nav li{
     margin: 20px;
     display: inline-block;
-    /* try floating */
 }
 
 nav {
-    width: 100%;
-    
-    
+    width: 100%;   
 }
 
 /* Hamburger menu */
@@ -193,16 +192,13 @@ section, .copyright {
 .line_up_image, .experiences_image {
     width: 50%;
     height: 500px;
-    background-size: cover;
-    
-    
+    background-size: cover;   
 }
 
 .line_up_image {
      background-image: url("./assets/right-image.jpg");
      float: right;
      background-position: center;
-
 }
 
 .experiences_image {
@@ -287,9 +283,8 @@ section, .copyright {
 
 .icons i {
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
-
 
 /* Footer styling */
 
@@ -316,7 +311,6 @@ form {
 input[type=email] {
     padding: 5px 20px;
     width: calc(100% - 165px);
-    
     
 }
 
