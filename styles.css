@@ -14,7 +14,7 @@ ul,li {
     padding: 0;
 }
 
-button, input {
+.button, input {
     border: none;
     font-size: 1.25rem;
 }
@@ -43,16 +43,16 @@ img {
     display: block;
 }
 
-body,a, button, input[type=submit] {
+body,a, .button, button[type=submit] {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
 
-nav,h1,button,h2, h3, input[type=submit] {
+nav,h1,.button,h2, h3, button[type=submit] {
     text-transform: uppercase;
 }
 
-h1,h2,button,input[type=submit] {
+h1,h2,.button,button[type=submit] {
    
     font-family: 'Iceberg', cursive;
 }
@@ -83,10 +83,12 @@ h4 {
     margin: 25px auto 0;
 }
 
-button, input[type=submit] {
+.button {
     background-color: #9200ff;
     padding: 5px 20px;
-    margin-top: 25px;
+    display: inline-block;
+    margin: 25px auto 0;
+    
         
 }
 
@@ -233,7 +235,7 @@ section, .copyright {
     background-size: cover;
 }
 
-.tickets .information button {
+.tickets .information .button {
     position: absolute;
     bottom: 0;
 }
@@ -314,7 +316,7 @@ input[type=email] {
     
 }
 
-input[type=email], input[type=submit] {
+input[type=email], button[type=submit] {
     float: left;
     margin: 0;
 }
@@ -410,13 +412,8 @@ input[type=email]::placeholder {
         
     }
 
-    .tickets .information button {
+    .tickets .information .button {
         position: inherit;
-    }
-
-    button {
-        display: block;
-        margin: 25px auto 0;
     }
 
     .contact, .stay_updated, input {
@@ -446,13 +443,13 @@ input[type=email]::placeholder {
         display: none;
     }
 
-    input[type=submit], input[type=email] {
+    button[type=submit], input[type=email] {
         float: none;
         width: 100%;
         
     }
 
-    input[type=submit] {
+    button[type=submit] {
         margin-top: 10px;
     }
 
@@ -468,7 +465,7 @@ input[type=email]::placeholder {
 
 @media (max-width:560px) {
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     h4 {
