@@ -26,6 +26,8 @@ h2,p, h1, h3 {
 
 a {
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
 /* base styling */
@@ -88,6 +90,7 @@ h4 {
     padding: 5px 20px;
     display: inline-block;
     margin: 25px auto 0;
+    transition: all 0.5s;
     
         
 }
@@ -162,6 +165,10 @@ nav {
 
 .social li {
     margin: 20px;
+}
+
+.social i{
+    transition: all 0.3s;
 }
 
 /* Main styling */
@@ -325,6 +332,42 @@ input[type=email]::placeholder {
     font-size: 1rem;
 }
 
+/* pseudo elements */
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    height: 5px;
+    right: -10%;
+    bottom: -10px;
+    background-color: #9200ff;
+    width: 0;
+    transition: all 0.3s;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+
+/* hover effects */
+
+nav a:hover::before, a:focus::before {
+    width: 120%;
+    
+}
+
+.button:hover, .button:focus {
+    background-color: #ffffff;
+    color: #9200ff;
+}
+
+.fas.fa-bars:hover {
+    color: #9200ff;
+}
+
+.social i:hover, .social i:focus {
+    transform: scale(1.3);
+}
 
 /* Media queries */
 
@@ -396,6 +439,7 @@ input[type=email]::placeholder {
 
     .fas.fa-bars {
         display: block;
+        transition: all 0.3s;
     }
 
     .icons {
