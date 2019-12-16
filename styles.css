@@ -34,6 +34,8 @@ a {
 
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -133,6 +135,8 @@ header {
 nav ul {
     text-align: center;
     padding-top: 40px;
+    transition: all 0.5s;
+    z-index: 2;
 }
 nav li{
     margin: 20px;
@@ -145,12 +149,24 @@ nav {
 
 /* Hamburger menu */
 
-.fas.fa-bars {
+.menu {
     display: none;
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 50px;
     font-size: 2rem;
+    background-color: #0f0632;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + ul {
+    left: 0;
+    
 }
 
 /* Social networks list */
@@ -259,14 +275,14 @@ section, .copyright {
     margin-bottom: 30px;
 }
 
-.gram img {
+.gram li {
     width: calc(100% / 3 - (4% / 3));
     margin-right: 2%;
     margin-bottom: 2%;
     float: left;  
 }
 
-.gram img:nth-of-type(3n) {
+.gram li:nth-of-type(3n) {
     margin-right: 0;
 }
 
@@ -362,7 +378,7 @@ nav a:hover::before, a:focus::before {
     color: #9200ff;
 }
 
-.fas.fa-bars:hover {
+.menu:hover {
     color: #9200ff;
 }
 
@@ -400,11 +416,26 @@ nav a:hover::before, a:focus::before {
         width: 60%;
     }
 
-    .social,header nav {
+    .social{
         display: none;
     }
 
-    .fas.fa-bars {
+    header nav ul {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        padding: 100px 0;
+        background-color: #0f0632;
+        
+
+    }
+
+    header nav ul li {
+        display: block;
+    }
+
+    .menu {
         display: block;
         transition: all 0.3s;
     }
@@ -500,14 +531,14 @@ nav a:hover::before, a:focus::before {
 
     /* The gram section */
 
-    .gram img {
+    .gram li {
         width: calc(100% / 2 - 2%/2);
     }
 
-    .gram img:nth-of-type(2) {
+    .gram li:nth-of-type(2) {
         margin-right: 0;
     }
-    .gram img:nth-of-type(3) {
+    .gram li:nth-of-type(3) {
         display: none;
     }
 

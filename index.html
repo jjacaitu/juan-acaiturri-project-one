@@ -10,29 +10,33 @@
     <title>Thunder Force Stadium</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav>
+            <label class="menu" for="menu">
+                <i class="fas fa-bars hamburger_menu" aria-label="Menu"></i>
+            </label>
+            <input type="checkbox" name="menu" id="menu">
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
-        <i class="fas fa-bars hamburger_menu"></i>
+        
         <div class="header_main">
             <h1>thunder force stadium</h1>
             <h4>presented by hot cops</h4>
         </div>
         <ul class="social">
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" aria-label="Go to Thunder Force Stadium Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Go to Thunder Force Stadium Facebook profile"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Go to Thunder Force Stadium Snapchat profile"><i class="fab fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Go to Thunder Force Stadium Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
         </ul>  
     </header>
     <main>
-        <section class="line_up clearfix">
+        <section class="line_up clearfix" id="about">
             <div class="line_up_image"></div>
             <div class="information">
                 <h2>performing line up</h2>
@@ -82,7 +86,7 @@
                 </ul>
             </div>
         </section>
-        <section class="gram clearfix">
+        <section class="gram clearfix" id="blog">
             <div class="wrapper">
                 <h2>the gram</h2>
                 <ul class="gram_images">
@@ -109,7 +113,7 @@
             </nav>
             <div class="footer_info">
                 <div class="wrapper clearfix">
-                    <div class="contact">
+                    <div class="contact" id="contact">
                         <h2>contact</h2>
                         <p>info@email.com | 123 - 456 - 7890</p>
                         <p>123 some road, Toronto, ON</p>
