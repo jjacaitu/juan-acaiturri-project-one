@@ -434,7 +434,6 @@ nav a:hover::before, a:focus::before {
     }
 
     .tickets_image {
-        /* padding: 0; */
         height: 85vw;
         margin-right: 0;
         max-height: 400px;
